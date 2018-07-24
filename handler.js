@@ -12,7 +12,7 @@ const makePolyfill = uaString => getPolyfillString({
   headers: {
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/javascript;charset=utf-8",
-    "Content-Length": polyfill.length
+    "Content-Length": polyfill.length,
     "Cache-Control": "immutable"
   },
   body: polyfill
@@ -21,7 +21,7 @@ const makePolyfill = uaString => getPolyfillString({
 const handle = (event, context, callback) => (
   makePolyfill(event.headers["user-agent"])
     .then(response => callback(null, response))
-    .catch(callback);
+    .catch(callback)
 );
 
 module.exports = { handle };

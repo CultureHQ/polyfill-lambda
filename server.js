@@ -17,9 +17,6 @@ const makePolyfill = uaString => polyfill.getPolyfillString({
   body: polyfill
 }));
 
-module.exports = makePolyfill;
-
-
 app.options("/", (request, response) => {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.end();
