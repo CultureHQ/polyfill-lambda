@@ -13,7 +13,7 @@ const makePolyfill = uaString => getPolyfillString({
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/javascript;charset=utf-8",
     "Content-Length": polyfill.length,
-    "Cache-Control": "immutable"
+    "Cache-Control": "max-age=31536000"
   },
   body: polyfill
 }));

@@ -6,6 +6,11 @@ provider:
   stage: production
   region: us-west-2
 
+package:
+  exclude:
+  - server.js
+  - test/
+
 functions:
   sign:
     handler: handler.handle
