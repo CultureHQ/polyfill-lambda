@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CultureHQ/polyfill.git"
+    "url": "git+https://github.com/CultureHQ/polyfill-lambda.git"
   },
   "author": "Kevin Deisz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CultureHQ/polyfill/issues"
+    "url": "https://github.com/CultureHQ/polyfill-lambda/issues"
   },
-  "homepage": "https://github.com/CultureHQ/polyfill#readme",
+  "homepage": "https://github.com/CultureHQ/polyfill-lambda#readme",
   "dependencies": {
     "polyfill-service": "^3.25.1"
   },
