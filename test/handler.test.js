@@ -2,8 +2,11 @@ const { handle } = require("../handler");
 const USER_AGENTS = require("./user-agents.json");
 
 Object.keys(USER_AGENTS).forEach(browser => {
+  const userAgent = USER_AGENTS[browser];
+  const event = { requestContext: { identity: { userAgent } } };
+
   test(`returns a reasonable response for ${browser}`, done => {
-    handle({ headers: { "user-agent": USER_AGENTS[browser] } }, null, (error, response) => {
+    handle(event, null, (error, response) => {
       const { statusCode, headers, body } = response;
 
       expect(error).toBe(null);
