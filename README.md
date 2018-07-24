@@ -1,5 +1,7 @@
 # polyfill-lambda
 
+[![Build Status](https://travis-ci.com/CultureHQ/polyfill-lambda.svg?branch=master)](https://travis-ci.com/CultureHQ/polyfill-lambda)
+
 Uses [polyfill.io](https://polyfill.io/v2/docs/)'s service to generate a polyfill based on the user agent of the request. Aggressively caches to ensure as few requests as possible.
 
 ## Getting started
