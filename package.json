@@ -1,0 +1,26 @@
+{
+  "name": "polyfill",
+  "version": "0.0.1",
+  "description": "Polyfills based on the user agent",
+  "main": "handler.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CultureHQ/polyfill.git"
+  },
+  "author": "Kevin Deisz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CultureHQ/polyfill/issues"
+  },
+  "homepage": "https://github.com/CultureHQ/polyfill#readme",
+  "dependencies": {
+    "polyfill-service": "^3.25.1"
+  },
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}

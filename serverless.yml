@@ -1,0 +1,16 @@
+service: polyfill
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: production
+  region: us-west-2
+
+functions:
+  sign:
+    handler: handler.handle
+    events:
+    - http:
+        path: polyfill
+        method: get
+        cors: true
