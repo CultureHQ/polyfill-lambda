@@ -12,7 +12,7 @@ package:
   - test/
 
 functions:
-  sign:
+  polyfill:
     handler: handler.handle
     events:
     - http:
