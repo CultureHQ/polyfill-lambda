@@ -19,7 +19,7 @@ const makePolyfill = uaString => getPolyfillString({
 }));
 
 const handle = (event, context, callback) => (
-  makePolyfill(event.headers["user-agent"])
+  makePolyfill(event.requestContext.identity.userAgent)
     .then(response => callback(null, response))
     .catch(callback)
 );
