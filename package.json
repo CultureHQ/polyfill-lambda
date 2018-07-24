@@ -12,7 +12,7 @@
     "url": "git+https://github.com/CultureHQ/polyfill.git"
   },
   "author": "Kevin Deisz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CultureHQ/polyfill/issues"
   },
