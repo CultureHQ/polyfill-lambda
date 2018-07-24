@@ -10,7 +10,33 @@ Ensure you have `node` and `yarn` installed. Run `yarn start` to start a local s
 
 ## Deployment
 
-Install [`serverless`](https://serverless.com/) by running `npm install -g serverless`. You can then run `sls deploy --aws-profile [PROFILE]` to deploy the function.
+Install [`serverless`](https://serverless.com/) by running `npm install -g serverless`. You can then run `sls deploy --aws-profile [PROFILE]` to deploy the function. This will trigger output that looks something like:
+
+```
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (57.17 MB)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+..............
+Serverless: Stack update finished...
+Service Information
+service: polyfill
+stage: production
+region: us-west-2
+stack: polyfill-production
+api keys:
+  None
+endpoints:
+  GET - https://xxxxxxxxxx.execute-api.us-west-2.amazonaws.com/production/polyfill
+functions:
+  polyfill: polyfill-production-polyfill
+```
+
+You can then place that URL in a `script` tag in your application's HTML before you load your main JavaScript to get all of the necessary polyfills.
 
 ## Testing
 
