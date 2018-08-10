@@ -3,10 +3,14 @@ const { getPolyfillString } = require("polyfill-service");
 
 const app = express();
 
-const makePolyfill = uaString => polyfill.getPolyfillString({
+const makePolyfill = uaString => getPolyfillString({
   uaString,
-  minify,
-  features: { es6: {}, "default-3.6": {} },
+  minify: false,
+  features: {
+    "default-3.6": {},
+    es6: {},
+    es7: {}
+  },
   unknown: "polyfill"
 }).then(polyfill => ({
   headers: {

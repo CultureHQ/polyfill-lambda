@@ -5,7 +5,7 @@ const { getPolyfillString } = require("polyfill-service");
 const makePolyfill = uaString => getPolyfillString({
   uaString,
   minify: true,
-  features: { es6: {}, "default-3.6": {} },
+  features: { "default-3.6": {}, es6: {}, es7: {} },
   unknown: "polyfill"
 }).then(polyfill => ({
   statusCode: 200,
