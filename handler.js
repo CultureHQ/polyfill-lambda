@@ -1,27 +1,17 @@
 "use strict";
 
-const { getPolyfillString } = require("polyfill-service");
+const makePolyfill = require("./lib/make-polyfill");
+const parseQueryString = require("./lib/parse-query-string");
 
-const makePolyfill = uaString => getPolyfillString({
-  uaString,
-  minify: true,
-  features: { "default-3.6": {}, es6: {}, es7: {} },
-  unknown: "polyfill"
-}).then(polyfill => ({
-  statusCode: 200,
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Content-Type": "application/javascript;charset=utf-8",
-    "Content-Length": polyfill.length,
-    "Cache-Control": "max-age=31536000"
-  },
-  body: polyfill
-}));
+const getUserAgent = ({ requestContext, Records: [{ cf: { request } }] }) => {
+  const { ua } = parseQueryString(request.querystring);
+  return ua || requestContext.identity.userAgent;
+};
 
-const handle = (event, context, callback) => (
-  makePolyfill(event.requestContext.identity.userAgent)
+const handle = (event, context, callback) => {
+  makePolyfill({ uaString: getUserAgent(event), cache: true })
     .then(response => callback(null, response))
     .catch(callback)
-);
+};
 
 module.exports = { handle };

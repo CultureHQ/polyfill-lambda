@@ -2,13 +2,14 @@ service: polyfill
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   stage: production
   region: us-west-2
 
 package:
   exclude:
   - server.js
+  - coverage/
   - test/
 
 functions:

@@ -6,7 +6,7 @@ Uses [polyfill.io](https://polyfill.io/v2/docs/)'s service to generate a polyfil
 
 ## Getting started
 
-Ensure you have `node` and `yarn` installed. Run `yarn start` to start a local server at `http://localhost:8081`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
+Ensure you have `node` and `yarn` installed. Run `yarn start` to start a local server at `http://localhost:8080`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
 
 ## Deployment
 
