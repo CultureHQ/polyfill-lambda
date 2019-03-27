@@ -17,6 +17,6 @@ functions:
     handler: handler.handle
     events:
     - http:
-        path: polyfill/v2
+        path: polyfill/v3
         method: get
         cors: true
