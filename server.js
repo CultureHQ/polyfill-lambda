@@ -5,14 +5,16 @@ const { makePolyfill } = require("./handler");
 
 const app = express();
 
-app.options("/", (request, response) => {
-  response.setHeader("Access-Control-Allow-Origin", "*");
-  response.end();
+app.use((req, res, next) => {
+  console.log(`[${new Date().toUTCString()}] ${req.method} ${req.path}`);
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET");
+
+  next();
 });
 
 app.get("/", (request, response, next) => {
-  console.log(`[${new Date().toUTCString()}] GET /`);
-
   const uaString = request.query.ua || request.headers["user-agent"];
 
   makePolyfill({ uaString, cache: false }).then(({ headers, body }) => {
@@ -24,6 +26,4 @@ app.get("/", (request, response, next) => {
   }).catch(next);
 });
 
-app.listen(8080, () => {
-  console.log("Listening on port 8080...");
-});
+app.listen(8080, () => console.log("Listening on port 8080..."));
