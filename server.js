@@ -1,9 +1,9 @@
 "use strict";
 
 const express = require("express");
+const { makePolyfill } = require("./handler");
 
 const app = express();
-const makePolyfill = require("./lib/make-polyfill");
 
 app.options("/", (request, response) => {
   response.setHeader("Access-Control-Allow-Origin", "*");
@@ -17,7 +17,7 @@ app.get("/", (request, response, next) => {
 
   makePolyfill({ uaString, cache: false }).then(({ headers, body }) => {
     Object.keys(headers).forEach(header => {
-      response.setHeader(header, headers[header][0].value);
+      response.setHeader(header, headers[header]);
     });
 
     response.send(body);
