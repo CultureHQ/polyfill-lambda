@@ -25,8 +25,8 @@ const makePolyfill = ({ uaString, cache }) => (
 );
 
 const handle = (event, context, callback) => {
-  const { requestContext, queryStringParameters } = event;
-  const uaString = queryStringParameters.ua || requestContext.identity.userAgent;
+  const { requestContext, queryStringParameters: query } = event;
+  const uaString = (query && query.ua) || requestContext.identity.userAgent;
 
   makePolyfill({ uaString, cache: true })
     .then(response => callback(null, response))
