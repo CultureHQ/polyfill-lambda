@@ -21,7 +21,7 @@
     "polyfill-service": "^3.25.3"
   },
   "devDependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.0",
     "jest": "^24.8.0"
   }
 }
