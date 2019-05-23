@@ -15,11 +15,11 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (request, response, next) => {
-  const uaString = request.query.ua || request.headers["user-agent"];
+  const uaString = request.headers["user-agent"];
 
   makePolyfill({ uaString, cache: false }).then(({ headers, body }) => {
     Object.keys(headers).forEach(header => {
-      response.setHeader(header, headers[header]);
+      response.setHeader(header, headers[header][0].value);
     });
 
     response.send(body);

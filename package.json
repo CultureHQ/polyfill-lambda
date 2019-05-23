@@ -1,6 +1,6 @@
 {
   "name": "polyfill",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Polyfills based on the user agent",
   "main": "handler.js",
   "scripts": {
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/CultureHQ/polyfill-lambda#readme",
   "dependencies": {
-    "polyfill-service": "^3.25.3"
+    "polyfill-library": "^3.34.0"
   },
   "devDependencies": {
+    "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
     "express": "^4.17.0",
     "jest": "^24.8.0"
   }

@@ -9,42 +9,20 @@ const userAgents = {
   "Edge 25":    "Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586"
 };
 
-const buildEvent = (detectedUserAgent, queryUserAgent) => {
-  const ua = queryUserAgent === undefined ? "" : `?ua=${encodeURIComponent(queryUserAgent)}`;
-
-  return {
-    requestContext: { identity: { userAgent: detectedUserAgent } },
-    queryStringParameters: { ua }
-  };
-};
-
-const expectValidResponse = (event, done) => {
-  handle(event, null, (error, response) => {
-    expect(error).toBe(null);
-
-    const { statusCode, headers, body } = response;
-
-    expect(statusCode).toEqual(200);
-    expect(headers["Content-Type"].startsWith("application/javascript")).toBe(true);
-    expect(body).toMatchSnapshot();
-
-    done();
-  });
-};
-
 Object.keys(userAgents).forEach(browser => {
   test(`returns a reasonable response for ${browser}`, done => {
-    const event = buildEvent(userAgents[browser], userAgents[browser]);
-    expectValidResponse(event, done);
+    const event = { Records: [{ cf: { request: { headers: { "user-agent": [{ value: userAgents[browser] }] } } } }] };
+
+    handle(event, null, (error, response) => {
+      expect(error).toBe(null);
+
+      const { status, headers, body } = response;
+
+      expect(status).toEqual(200);
+      expect(headers["Content-Type"][0].value.startsWith("application/javascript")).toBe(true);
+      expect(body).toMatchSnapshot();
+
+      done();
+    });
   });
-});
-
-test("does not require a ua query param", done => {
-  const event = buildEvent(userAgents["Chrome 63"]);
-  expectValidResponse(event, done);
-});
-
-test("allows overriding the user agent with the ua query param", done => {
-  const event = buildEvent(userAgents["Chrome 63"], userAgents["IE 9"]);
-  expectValidResponse(event, done);
 });

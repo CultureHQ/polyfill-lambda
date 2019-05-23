@@ -1,0 +1,6 @@
+bucket:
+  name: [mydomain]-polyfill-production
+
+distribution:
+  alias: polyfill.[mydomain].com
+  cert-arn: arn:aws:acm:us-east-1:012345:certificate/012345-0123-012345

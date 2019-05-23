@@ -2,42 +2,32 @@
 
 [![Build Status](https://travis-ci.com/CultureHQ/polyfill-lambda.svg?branch=master)](https://travis-ci.com/CultureHQ/polyfill-lambda)
 
-Uses [polyfill.io](https://polyfill.io/v2/docs/)'s service to generate a polyfill based on the user agent of the request. Aggressively caches to ensure as few requests as possible.
+`polyfill-lambda` is a service deployed to Amazon Web Services that returns JavaScript polyfills based on the user agent of the requesting browser. You can use this package to deploy your own version for your service or organization.
 
 ## Getting started
 
-Ensure you have `node` and `yarn` installed. Run `yarn start` to start a local server at `http://localhost:8080`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
+Ensure you have `node` and `yarn` installed. Run `yarn` to get the dependencies, then run `yarn start` to start a local server at `http://localhost:8080`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
 
 ## Deployment
 
-Install [`serverless`](https://serverless.com/) by running `npm install -g serverless`. You can then run `sls deploy --aws-profile [PROFILE]` to deploy the function. This will trigger output that looks something like:
+First, copy `serverless-env.yml.sample` to `serverless-env.yml` and fill in the relevant information. Below are the explanation for the options:
 
-```
-Serverless: Packaging service...
-Serverless: Excluding development dependencies...
-Serverless: Uploading CloudFormation file to S3...
-Serverless: Uploading artifacts...
-Serverless: Uploading service .zip file to S3 (57.17 MB)...
-Serverless: Validating template...
-Serverless: Updating Stack...
-Serverless: Checking Stack update progress...
-..............
-Serverless: Stack update finished...
-Service Information
-service: polyfill
-stage: production
-region: us-west-2
-stack: polyfill-production
-api keys:
-  None
-endpoints:
-  GET - https://xxxxxxxxxx.execute-api.us-west-2.amazonaws.com/production/polyfill
-functions:
-  polyfill: polyfill-production-polyfill
+- `bucket.name` - any name unique to S3. Nothing actually gets stored in here, it's just used as the origin for CloudFront
+- `distribution.alias` - the domain that will be used for the CloudFront distribution (presumably something like `polyfill.culturehq.com`)
+- `distribution.cert-arn` - the ARN of an AWS Certificate Manager certificate that matches the alias (as in, as certificate for `polyfill.culturehq.com`)
+
+With the config in place, install [`serverless`](https://serverless.com/) by running `npm install -g serverless`. You can then run `sls deploy --aws-profile [PROFILE]` to deploy the lambda function, S3 bucket, and CloudFront distribution.
+
+Once everything has been deployed, you can associate the CloudFront distribution with your domain through AWS Route53 by creating an alias record for the appropriate hosted zone. Then you can include script tag like the below to conditionally load only the correct polyfills:
+
+```html
+<script type="text/javascript" src="https://polyfill.culturehq.com"></script>
 ```
 
-You can then place that URL in a `script` tag in your application's HTML before you load your main JavaScript to get all of the necessary polyfills.
+## Contributing
 
-## Testing
+Bug reports and pull requests are welcome on GitHub at https://github.com/CultureHQ/polyfill-lambda.
 
-Unit tests are run by executing `yarn test`.
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

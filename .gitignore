@@ -1,3 +1,4 @@
 /.serverless/
 /coverage/
 /node_modules/
+/serverless-env.yml

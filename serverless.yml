@@ -1,10 +1,13 @@
 service: polyfill
 
+plugins:
+  - '@silvermine/serverless-plugin-cloudfront-lambda-edge'
+
 provider:
   name: aws
   runtime: nodejs10.x
   stage: ${opt:stage, 'production'}
-  region: ${opt:region, 'us-west-2'}
+  region: us-east-1
 
 package:
   exclude:
@@ -15,8 +18,47 @@ package:
 functions:
   polyfill:
     handler: handler.handle
-    events:
-    - http:
-        path: polyfill/v3
-        method: get
-        cors: true
+    lambdaAtEdge:
+      distribution: PolyfillDistribution
+      eventType: origin-request
+
+resources:
+  Resources:
+    PolyfillBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${file(./serverless-env.yml):bucket.name}
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html
+    PolyfillDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          Aliases:
+          - ${file(./serverless-env.yml):distribution.alias}
+          DefaultCacheBehavior:
+            Compress: true
+            ForwardedValues:
+              Cookies:
+                Forward: none
+              Headers:
+                - User-Agent
+              QueryString: true
+            TargetOriginId: polyfill-lambda
+            ViewerProtocolPolicy: redirect-to-https
+          DefaultRootObject: index.html
+          Enabled: true
+          HttpVersion: http2
+          Origins:
+          - DomainName:
+              Fn::GetAtt:
+                - PolyfillBucket
+                - DomainName
+            Id: polyfill-lambda
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+          ViewerCertificate:
+            AcmCertificateArn: ${file(./serverless-env.yml):distribution.cert-arn}
+            SslSupportMethod: sni-only
