@@ -2,9 +2,9 @@ service: polyfill
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  stage: production
-  region: us-west-2
+  runtime: nodejs10.x
+  stage: ${opt:stage, 'production'}
+  region: ${opt:region, 'us-west-2'}
 
 package:
   exclude:
