@@ -1,4 +1,7 @@
 /.serverless/
 /coverage/
 /node_modules/
+
 /serverless-env.yml
+/src/features.js
+/src/headers.js

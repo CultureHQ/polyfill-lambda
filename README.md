@@ -6,7 +6,13 @@
 
 ## Getting started
 
-Ensure you have `node` and `yarn` installed. Run `yarn` to get the dependencies, then run `yarn start` to start a local server at `http://localhost:8080`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
+Ensure you have `node` and `yarn` installed.
+
+1. Run `yarn` in the root of the repository to get the dependencies.
+2. Create a `src/features.js` file (you can copy the sample) containing the features that you want polyfilled. You can take a look at [polyfill.io's docs](https://polyfill.io/v3/url-builder/) for the available options.
+3. Create a `src/headers.js` file (you can copy the sample) containing the desired headers to be served alongside the JavaScript.
+
+Now you can run `yarn start` to start a local server at `http://localhost:8080`. Visit that location in different browsers to view the polyfill. Note that since this server is running in development, it returns unminified JavaScript.
 
 ## Deployment
 

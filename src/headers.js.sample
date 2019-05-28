@@ -1,0 +1,20 @@
+"use strict";
+
+const report = "https://culturehq.report-uri.com";
+const headers = {
+  "Access-Control-Allow-Origin": "https://platform.culturehq.com",
+  "Content-Security-Policy": "default-src 'self'",
+  "Expect-CT": `max-age=86400, enforce, report-uri="${report}/r/d/ct/enforce"`,
+  "Feature-Policy": "camera 'none'; microphone 'none'; speaker 'none'",
+  "NEL": `{"report_to":"default","max_age":31536000,"include_subdomains":true}`,
+  "Referrer-Policy": "same-origin",
+  "Report-To": `{"group":"default","max_age":31536000,"endpoints":[{"url":"${report}/a/d/g"}],"include_subdomains":true}`,
+  "Strict-Transport-Security": "max-age=31536000; includeSubdomains; preload",
+  "X-Content-Type-Options": "nosniff",
+  "X-Download-Options": "noopen",
+  "X-Frame-Options": "DENY",
+  "X-Permitted-Cross-Domain-Policies": "none",
+  "X-XSS-Protection": `1; mode=block; report="${report}/r/d/xss/enforce"`
+};
+
+module.exports = headers;

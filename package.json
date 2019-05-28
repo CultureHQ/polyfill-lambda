@@ -1,6 +1,6 @@
 {
-  "name": "polyfill",
-  "version": "0.1.0",
+  "name": "polyfill-lambda",
+  "version": "0.2.0",
   "description": "Polyfills based on the user agent",
   "main": "handler.js",
   "scripts": {
