@@ -24,5 +24,11 @@
     "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
     "express": "^4.17.1",
     "jest": "^24.8.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setupTests.js"
+    ],
+    "testRegex": "\\.test\\.js$"
   }
 }
