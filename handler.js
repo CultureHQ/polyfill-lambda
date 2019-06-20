@@ -1,11 +1,9 @@
 "use strict";
 
 const { getPolyfillString } = require("polyfill-library");
-
-const features = require("./src/features");
 const headers = require("./src/headers");
 
-const makePolyfill = ({ uaString, cache }) => (
+const makePolyfill = ({ uaString, cache, features }) => (
   getPolyfillString({ uaString, minify: cache, features, unknown: "polyfill" })
     .then(polyfill => {
       const polyfillHeaders = {

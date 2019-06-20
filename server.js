@@ -16,8 +16,9 @@ app.use((req, res, next) => {
 
 app.get("/", (request, response, next) => {
   const uaString = request.headers["user-agent"];
-
-  makePolyfill({ uaString, cache: false }).then(({ headers, body }) => {
+  const features = {};
+  request.query.features.split(',').map(feature => {features[feature] = {}});
+  makePolyfill({ uaString, cache: false, features }).then(({ headers, body }) => {
     Object.keys(headers).forEach(header => {
       response.setHeader(header, headers[header][0].value);
     });
