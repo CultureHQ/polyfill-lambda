@@ -26,7 +26,7 @@ const makePolyfill = ({ uaString, cache, features }) => (
 const handle = (event, context, callback) => {
   const uaString = event.Records[0].cf.request.headers["user-agent"][0].value;
 
-  makePolyfill({ uaString, cache: true })
+  makePolyfill({ uaString, cache: true, features : {} })
     .then(response => callback(null, response))
     .catch(callback)
 };
