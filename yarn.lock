@@ -144,10 +144,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@financial-times/polyfill-useragent-normaliser@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.1.0.tgz#f8d577e16cabd814cf6392e9b1725a97e18e57f4"
-  integrity sha512-IdVf3GHH/QXPSbSfksbi7kN5t+9d29VCtF7B2hKvhmae2RjqgVS1Jlxeuny4oBSJ899fLSUYFoeK2hyk8jzfAA==
+"@financial-times/polyfill-useragent-normaliser@^1.2.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.3.0.tgz#c69975a07921d599d913f1de96a0a753826c46fd"
+  integrity sha512-S3RwBuHiASq4xZbrxOxeFfBsvkcTdoOfmYK6LOzPvhjz/5TDAqEVtN3G/R39V8Ij9WBhuIwVoB1dVdDp/QUvtg==
   dependencies:
     "@financial-times/useragent_parser" "^1.2.1"
     semver "^5.6.0"
@@ -156,6 +156,11 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.2.1.tgz#f62deaed0edb8bcc28db6d243786b28a51bfcfaf"
   integrity sha512-pAHRen99xeSKJyRd4bWdA5DQyn8NAvykVjPKzvDs8AsYzUxADRzy40/cWd2wdjLEOlm5VO3IIZRJS0ljnMl0sQ==
+
+"@iarna/toml@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.3.tgz#f060bf6eaafae4d56a7dac618980838b0696e2ab"
+  integrity sha512-FmuxfCuolpLl0AnQ2NHSzoUKWEJDFl63qXjzdoWBVyFCXzMGm1spBzk7LeHNoVCiWCF7mRVms9e6jEV9+MoPbg==
 
 "@jest/console@^24.7.1":
   version "24.7.1"
@@ -1350,18 +1355,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-glob@^7.0.5, glob@^7.1.1, glob@^7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.1.3:
+glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -1378,11 +1372,7 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.10.0.tgz#1e09776dffda5e01816b3bb4077c8b59c24eaa50"
   integrity sha512-0GZF1RiPKU97IHUO5TORo9w1PwrH/NBPl+fS7oMLdaTRiYmYbwK4NWoZWrAdd0/abG9R2BU+OiwyQpTpE6pdfQ==
 
-graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2:
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
-
-graceful-fs@^4.1.15:
+graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
@@ -2838,12 +2828,13 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-polyfill-library@^3.35.0:
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.35.0.tgz#1866a3cbc8a626b350c84f4b93d34de3ecd75e03"
-  integrity sha512-rXbv9XfVGGQ3a3T7R/xn55vu80+t0Rb3ix6a3KUMrb6IIScx+CX8GQurXdQfEGXTSTGVARYFr9XprCXC0l6YjA==
+polyfill-library@^3.36.0:
+  version "3.36.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.36.0.tgz#9075000972d1fe4d4b8f96cb06fa9bcf559ce6fe"
+  integrity sha512-znAPCvMVBenvFhb+QM+EBUC+DNFDhJ54SySyIbpjQuvkGCfOjQDhcYWuIKwIiRXwNp0/F6GWWpfK0gLTAV/Afg==
   dependencies:
-    "@financial-times/polyfill-useragent-normaliser" "^1.1.0"
+    "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
+    "@iarna/toml" "^2.2.3"
     "@webcomponents/template" "^1.4.0"
     Base64 "^1.0.0"
     audio-context-polyfill "^1.0.0"
@@ -2867,10 +2858,12 @@ polyfill-library@^3.35.0:
     resize-observer-polyfill "^1.5.1"
     rimraf "^2.6.2"
     spdx-licenses "^1.0.0"
+    stream-cache "^0.0.2"
     stream-from-promise "^1.0.0"
     stream-to-string "^1.1.0"
     toposort "^2.0.2"
     uglify-js "^2.7.5"
+    unorm "^1.6.0"
     usertiming "^0.1.8"
     web-animations-js "^2.2.5"
     whatwg-fetch "^2.0.3"
@@ -3118,13 +3111,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@^2.5.4, rimraf@^2.6.1:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
-  dependencies:
-    glob "^7.0.5"
-
-rimraf@^2.6.2:
+rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
@@ -3387,6 +3374,11 @@ stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
 
+stream-cache@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/stream-cache/-/stream-cache-0.0.2.tgz#1ac5ad6832428ca55667dbdee395dad4e6db118f"
+  integrity sha1-GsWtaDJCjKVWZ9ve45Xa1ObbEY8=
+
 stream-from-promise@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-from-promise/-/stream-from-promise-1.0.0.tgz#763687f7dd777e4c894f6408333fc6b3fc8a61bb"
@@ -3621,6 +3613,11 @@ union-value@^1.0.0:
     get-value "^2.0.6"
     is-extendable "^0.1.1"
     set-value "^0.4.3"
+
+unorm@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/unorm/-/unorm-1.6.0.tgz#029b289661fba714f1a9af439eb51d9b16c205af"
+  integrity sha512-b2/KCUlYZUeA7JFUuRJZPUtr4gZvBh7tavtv4fvk4+KV9pfGiR6CQAQAWl49ZpR3ts2dk4FYkP7EIgDJoiOLDA==
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
