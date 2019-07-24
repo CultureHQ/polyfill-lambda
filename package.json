@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/CultureHQ/polyfill-lambda#readme",
   "dependencies": {
-    "polyfill-library": "^3.36.0"
+    "polyfill-library": "^3.37.0"
   },
   "devDependencies": {
     "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
