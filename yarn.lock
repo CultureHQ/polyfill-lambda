@@ -401,6 +401,13 @@ abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
 
+abort-controller@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-2.0.3.tgz#b174827a732efadff81227ed4b8d1cc569baf20a"
+  integrity sha512-EPSq5wr2aFyAZ1PejJB32IX9Qd4Nwus+adnp7STYFM5/23nLPBazqZ1oor6ZqbH+4otaaGXTlC8RN5hq3C8w9Q==
+  dependencies:
+    event-target-shim "^5.0.0"
+
 accepts@~1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
@@ -1080,6 +1087,11 @@ event-source-polyfill@^0.0.9:
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/event-source-polyfill/-/event-source-polyfill-0.0.9.tgz#18c6205d170ab09db889ffceaa33f0e493f14a50"
 
+event-target-shim@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
+
 exec-sh@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.2.tgz#6738de2eb7c8e671d0366aea0b0db8c6f7d7391b"
@@ -1097,10 +1109,6 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
-
-exists-sync@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.4.tgz#9744c2c428cc03b01060db454d4b12f0ef3c8879"
 
 exit@^0.1.2:
   version "0.1.2"
@@ -2828,19 +2836,19 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-polyfill-library@^3.37.0:
-  version "3.37.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.37.0.tgz#6893a21f710c7429fff823ccd3fb51b879c4ec8c"
-  integrity sha512-lHLbkqr4CnZjadpWFt+z0cqYMY8LaKHzGpFhL/uk1/CuqH4pXJPnjEJstHYntVo+i9G9fOxKWjyFiqACO2O5GA==
+polyfill-library@^3.38.0:
+  version "3.38.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.38.0.tgz#8f82c55e49479c27013fa3ad347278bf2a1f37bb"
+  integrity sha512-HxhaVbgznssyBwntnKyOqnB1ckjPSt6cjf6tNWAeppWBHlMJAFVWIiN9ssMqdFggllTervIbLE0S95UuBuxfrA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
     "@iarna/toml" "^2.2.3"
     "@webcomponents/template" "^1.4.0"
     Base64 "^1.0.0"
+    abort-controller "^2.0.2"
     audio-context-polyfill "^1.0.0"
     diff "1.4.0"
     event-source-polyfill "^0.0.9"
-    exists-sync "0.0.4"
     from2-string "^1.1.0"
     glob "^7.1.1"
     graceful-fs "^4.1.10"
@@ -2866,7 +2874,8 @@ polyfill-library@^3.37.0:
     unorm "^1.6.0"
     usertiming "^0.1.8"
     web-animations-js "^2.2.5"
-    whatwg-fetch "^2.0.3"
+    whatwg-fetch "^3.0.0"
+    wicg-inert "^2.1.2"
     yaku "0.18.6"
 
 posix-character-classes@^0.1.0:
@@ -3706,9 +3715,10 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
   dependencies:
     iconv-lite "0.4.19"
 
-whatwg-fetch@^2.0.3:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
+whatwg-fetch@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
+  integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
 
 whatwg-mimetype@^2.0.0, whatwg-mimetype@^2.1.0:
   version "2.1.0"
@@ -3731,6 +3741,11 @@ which@^1.2.9, which@^1.3.0:
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   dependencies:
     isexe "^2.0.0"
+
+wicg-inert@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/wicg-inert/-/wicg-inert-2.1.2.tgz#bb15f2987a9cf45539c5e6ab59fb4fc5fbfe0619"
+  integrity sha512-7mgGbUPdgXAyR8pTX6b5eGplIuBB2mw+gjtGwhVjPCXS8kswpOugGFZCO1aehaiJKGOAoFnK0/YNreHBpfiqXw==
 
 wide-align@^1.1.0:
   version "1.1.3"
