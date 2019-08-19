@@ -4,8 +4,8 @@
   "description": "Polyfills based on the user agent",
   "main": "handler.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "jest"
+    "lint": "chq-scripts lint",
+    "test": "chq-scripts test"
   },
   "repository": {
     "type": "git",
@@ -21,14 +21,20 @@
     "polyfill-library": "^3.38.0"
   },
   "devDependencies": {
+    "@culturehq/scripts": "^3.1.0",
     "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
-    "express": "^4.17.1",
-    "jest": "^24.9.0"
+    "express": "^4.17.1"
+  },
+  "eslintConfig": {
+    "extends": ["@culturehq"],
+    "rules": {
+      "strict": "off"
+    }
   },
   "jest": {
+    "roots": ["."],
     "setupFilesAfterEnv": [
       "./setupTests.js"
-    ],
-    "testRegex": "\\.test\\.js$"
+    ]
   }
 }

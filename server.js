@@ -1,5 +1,6 @@
 "use strict";
 
+/* eslint-disable import/no-extraneous-dependencies, no-console */
 const express = require("express");
 const { makePolyfill } = require("./handler");
 
