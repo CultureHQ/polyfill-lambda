@@ -1,5 +1,7 @@
 # polyfill-lambda
 
+[![Build Status](https://github.com/CultureHQ/polyfill-lambda/workflows/Push/badge.svg)](https://github.com/CultureHQ/polyfill-lambda/actions)
+
 `polyfill-lambda` is a service deployed to Amazon Web Services that returns JavaScript polyfills based on the user agent of the requesting browser. You can use this package to deploy your own version for your service or organization.
 
 ## Getting started
