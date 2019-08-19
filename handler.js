@@ -30,7 +30,7 @@ const handle = (event, context, callback) => {
 
   makePolyfill({ uaString, cache: true })
     .then(response => callback(null, response))
-    .catch(callback)
+    .catch(callback);
 };
 
 module.exports = { makePolyfill, handle };
