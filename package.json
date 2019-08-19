@@ -4,7 +4,7 @@
   "description": "Polyfills based on the user agent",
   "main": "handler.js",
   "scripts": {
-    "lint": "chq-scripts lint",
+    "lint": "node ensureSetup.js && chq-scripts lint",
     "test": "chq-scripts test"
   },
   "repository": {
@@ -34,7 +34,7 @@
   "jest": {
     "roots": ["."],
     "setupFilesAfterEnv": [
-      "./setupTests.js"
+      "./ensureSetup.js"
     ]
   }
 }
