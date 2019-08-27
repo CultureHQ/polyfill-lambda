@@ -21,18 +21,22 @@
     "polyfill-library": "^3.38.0"
   },
   "devDependencies": {
-    "@culturehq/scripts": "^3.1.0",
+    "@culturehq/scripts": "^4.0.1",
     "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
     "express": "^4.17.1"
   },
   "eslintConfig": {
-    "extends": ["@culturehq"],
+    "extends": [
+      "@culturehq"
+    ],
     "rules": {
       "strict": "off"
     }
   },
   "jest": {
-    "roots": ["."],
+    "roots": [
+      "."
+    ],
     "setupFilesAfterEnv": [
       "./ensureSetup.js"
     ]
