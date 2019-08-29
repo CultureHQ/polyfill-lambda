@@ -162,10 +162,10 @@
     eslint-plugin-react "^7.14.3"
     eslint-plugin-react-hooks "^2.0.1"
 
-"@culturehq/scripts@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@culturehq/scripts/-/scripts-4.0.1.tgz#1515837f8bffb88ba31675a43e995149793d1db2"
-  integrity sha512-bDjYHgAUqBuAAxf/GEKaj8orFezDjFn/NEOt78nuntiRAB3UvJ1cT/ojcQ0X7EWAn/MsLZB4kVqBKfwkSJcOOg==
+"@culturehq/scripts@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@culturehq/scripts/-/scripts-4.0.2.tgz#8cfe309f6fd10c9fe80519217550100a60e1af76"
+  integrity sha512-TJOcW1ZTUqAYvAwdNsTsuVlRFdBp2GceHQ4ZclvGkvp7aczzUCCReL4UASayGx/vBt4WgLW9YaAXAXD4YyPKgA==
   dependencies:
     "@babel/core" "^7.5.5"
     "@culturehq/eslint-config" "^4.0.1"

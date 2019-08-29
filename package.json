@@ -21,7 +21,7 @@
     "polyfill-library": "^3.38.0"
   },
   "devDependencies": {
-    "@culturehq/scripts": "^4.0.1",
+    "@culturehq/scripts": "^4.0.2",
     "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.1.1",
     "express": "^4.17.1"
   },
