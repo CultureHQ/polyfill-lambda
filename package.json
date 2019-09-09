@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/CultureHQ/polyfill-lambda#readme",
   "dependencies": {
-    "polyfill-library": "^3.39.0"
+    "polyfill-library": "^3.40.0"
   },
   "devDependencies": {
     "@culturehq/scripts": "^4.0.2",
