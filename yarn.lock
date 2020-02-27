@@ -1225,6 +1225,11 @@ cssstyle@^2.0.0:
   dependencies:
     cssom "~0.3.6"
 
+current-script-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/current-script-polyfill/-/current-script-polyfill-1.0.0.tgz#f31cf7e4f3e218b0726e738ca92a02d3488ef615"
+  integrity sha1-8xz35PPiGLBybnOMqSoC00iO9hU=
+
 damerau-levenshtein@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.6.tgz#143c1641cb3d85c60c32329e26899adea8701791"
@@ -3677,10 +3682,10 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-polyfill-library@^3.46.0:
-  version "3.46.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.46.0.tgz#70e4591e27a4aee6350e844e5d89551c594285bc"
-  integrity sha512-UmUcAWm8xL4DevCuSbBzQ4Lzj4IULebElDZXGK80mEgorFfbp1NHhLtbWFHwiSyZV7AnSKSAxFI1NwJt3WYtNQ==
+polyfill-library@^3.49.0:
+  version "3.49.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.49.0.tgz#fbc6563526042d66d3488a610b8d50ef722f1921"
+  integrity sha512-4qQZVvfAJuOWQcodvxjkPjCNbjLjWrPLXZIIXdXU5m07R+xKo/VtRUUb8E6PeTcpS8YRgrY0LfQqJLNWnJdrOA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
@@ -3689,6 +3694,7 @@ polyfill-library@^3.46.0:
     Base64 "^1.0.0"
     abort-controller "^3.0.0"
     audio-context-polyfill "^1.0.0"
+    current-script-polyfill "^1.0.0"
     diff "4.0.2"
     event-source-polyfill "^1.0.12"
     from2-string "^1.1.0"
