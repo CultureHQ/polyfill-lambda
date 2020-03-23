@@ -194,18 +194,18 @@
     jest "^25.1.0"
     yargs-parser "^16.1.0"
 
-"@financial-times/polyfill-useragent-normaliser@^1.2.0":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.6.3.tgz#e6e1a16de5d5931682d7a6da0f3989115e9f5d16"
-  integrity sha512-QNjxxVkZoQhjoGbMxpZffIiYIwUlT2/P4qgyEdF0CgflKg5xL0PE5YBlPozOj1Qozcfe6TJv5Pr9dliIdrcFEw==
+"@financial-times/polyfill-useragent-normaliser@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.7.0.tgz#6f830e7692bce601446c5833cc3917c3c187838f"
+  integrity sha512-cN2O4Eq2eLdg0j5sEszT6wxhOswPvR1Hgss2NmttuCvTFnVSE3saxg+Hl/buDaMGb193UrczPYPRUWNLKPQn8Q==
   dependencies:
-    "@financial-times/useragent_parser" "^1.2.1"
+    "@financial-times/useragent_parser" "^1.5.1"
     semver "^7.1.1"
 
-"@financial-times/useragent_parser@^1.2.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.4.1.tgz#4e7c2f0b9a9174c176dd7f4ccd890442bf9eafc1"
-  integrity sha512-f8C7QnUZSSpVzv98HB12TbQQY5oteKUOywmrVBHpJXZotdYg5cZ2nAfNISH4phPzVEsgqQRJWBdVknJNYYEC9w==
+"@financial-times/useragent_parser@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.5.1.tgz#14ef3e420b7a6617512e02bdd79189b5cb37f65d"
+  integrity sha512-g6MJ5tVszip1wAOq41yk8Z0WJqjfpu3hKaos/IaechYC4RqIn8bTanNR/EGD6oeOdJ9/fTPbQQX5/3ZQwSTXtQ==
 
 "@formatjs/intl-pluralrules@^1.1.2":
   version "1.5.2"
@@ -3682,12 +3682,12 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-polyfill-library@^3.52.3:
-  version "3.52.3"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.52.3.tgz#7b50a366e35212604d773db7a96de2a81f82c7dc"
-  integrity sha512-A8zf4yOX2PuqWJ6FWJs1F+LHgoc6LXDW5NNQS9TyQw8ABViADVFyrSUX3DcfTmzgfg91uvI4f5QXmJ1vlEfwTQ==
+polyfill-library@^3.53.1:
+  version "3.53.1"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.53.1.tgz#f0af6d23deb85b37f0bf398a185483857b2b97d2"
+  integrity sha512-pcLZb3hlH4fnGbfr1z5JN+MpypMv4/NX2x3kfWxNTC9v6zKEX5wjAPYIzwCPJMM56z0nrdxqFYKcxxHqRkPO1Q==
   dependencies:
-    "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
+    "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
     "@formatjs/intl-relativetimeformat" "^3.0.2"
     "@webcomponents/template" "^1.4.0"
