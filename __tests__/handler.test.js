@@ -20,7 +20,7 @@ Object.keys(userAgents).forEach(browser => {
 
       expect(status).toEqual(200);
       expect(headers["Content-Type"][0].value.startsWith("application/javascript")).toBe(true);
-      expect(body).toMatchSnapshot();
+      expect(body).toContain("Symbol");
 
       done();
     });
