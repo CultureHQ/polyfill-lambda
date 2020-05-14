@@ -3682,10 +3682,10 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-polyfill-library@^3.92.0:
-  version "3.92.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.92.0.tgz#1e7713ca3d0795a2971fdd969930274b2e899970"
-  integrity sha512-mLtABMKLbLCI0poZywPoE+L8Qxxj4j4c4d+et1CuT/SxonC7DQkW5S3swOg80V8ahIHJ1hDKQSv/IGRovFycaw==
+polyfill-library@^3.93.0:
+  version "3.93.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.93.0.tgz#75c091a4f8eaddd338ce1b8408c6e44ce17ef635"
+  integrity sha512-Sv4A4hUK5/s95EqUtOnbZawQj2o9aVsnZbIQ6pCg400I0Ip4mWNLyDhpXwj78WV6OWvGhh4LBNjm5G43c1R5TA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
