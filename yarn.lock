@@ -328,6 +328,14 @@
   resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.5.1.tgz#14ef3e420b7a6617512e02bdd79189b5cb37f65d"
   integrity sha512-g6MJ5tVszip1wAOq41yk8Z0WJqjfpu3hKaos/IaechYC4RqIn8bTanNR/EGD6oeOdJ9/fTPbQQX5/3ZQwSTXtQ==
 
+"@formatjs/intl-datetimeformat@^1.3.2":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-datetimeformat/-/intl-datetimeformat-1.3.3.tgz#3bf877005a2519df1ce008aa63bc960c9e1b8334"
+  integrity sha512-wLHQOqKU+I0sINFPA7jabYm/O+ep90NtMv88wCgtWjoHWkfpgK4MJ7mRU01O7Vm/a3onaYvfM4NISdSSLLmHuw==
+  dependencies:
+    "@formatjs/intl-getcanonicallocales" "^1.2.7"
+    "@formatjs/intl-utils" "^3.5.0"
+
 "@formatjs/intl-displaynames@^2.2.6":
   version "2.2.9"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-2.2.9.tgz#4e2a15f50b3c77d52c80c46f4cb3db32fdf46aea"
@@ -335,7 +343,7 @@
   dependencies:
     "@formatjs/intl-utils" "^3.5.0"
 
-"@formatjs/intl-getcanonicallocales@^1.2.6":
+"@formatjs/intl-getcanonicallocales@^1.2.6", "@formatjs/intl-getcanonicallocales@^1.2.7":
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/@formatjs/intl-getcanonicallocales/-/intl-getcanonicallocales-1.2.7.tgz#7d96330c1e1d5d3ba93f10e3b9a875ac165c30d1"
   integrity sha512-qrmHCMnUSlgus9O8e/jVYqe2l3jmVGVJUCMY0F9L222VQA+VA2O7VmV26ONsPMvO1BsYO2JyXNCMH3hNewIOhA==
@@ -3970,12 +3978,13 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-polyfill-library@^3.94.0:
-  version "3.94.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.94.0.tgz#672f37ad71d36e58bdd867977c20570b352e450d"
-  integrity sha512-LXUc9TOeP54uRq57kch6SkvOJgqpwHti2GOD/hBWRx/gFT9NQbMCoMm8n/d6C53jHExAfLdF3uqu6ZuZyAdAYQ==
+polyfill-library@^3.95.0:
+  version "3.95.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.95.0.tgz#20adb5ecc311fdde57e8f2bd65003c025a633119"
+  integrity sha512-nBiXOlJ41rln8hEBwINSWcTabOSampzPNogNg8fetP/brnVV8XT8bNmiMqUo2HGaaJUGcLLpjNZE3hskw8Gnkw==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
+    "@formatjs/intl-datetimeformat" "^1.3.2"
     "@formatjs/intl-displaynames" "^2.2.6"
     "@formatjs/intl-getcanonicallocales" "^1.2.6"
     "@formatjs/intl-listformat" "^2.2.6"
