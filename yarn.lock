@@ -3994,10 +3994,10 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-polyfill-library@^3.102.0:
-  version "3.102.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.102.0.tgz#16517c539b943e4ba06cf55aaedaec67fc2adbfa"
-  integrity sha512-4Pz8SXLHubVkJdDZY/6ANV/ZxJAeb0Q1/3Hq0+pnThVeJIVOkUpwwwrBjLKH2cM4/R7Sxyi1FLHYsSv3liIXeQ==
+polyfill-library@^3.103.0:
+  version "3.103.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.103.0.tgz#9ce644f25f7b6c1dab5b3d8bb5c1a0002170b77f"
+  integrity sha512-z6DMbqDGO87IeG/sjN/PGPgGLzhKftVj6OeRujxgQn+Kz7x+E8uzFvdB3X8dqoE4xaY6aX3ar0UzRxRlYPH9yg==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-datetimeformat" "3.2.3"
