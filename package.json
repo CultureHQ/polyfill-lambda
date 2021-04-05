@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@culturehq/scripts": "^6.0.1",
-    "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.2.0",
+    "@silvermine/serverless-plugin-cloudfront-lambda-edge": "2.2.1",
     "express": "^4.17.1"
   },
   "eslintConfig": {
