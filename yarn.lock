@@ -588,10 +588,10 @@
   resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.2.0.tgz#5e0b448d27fe3091bae6216456512c5904d05661"
   integrity sha512-fsLxt0CHx2HCV9EL8lDoVkwHffsA0snUpddYjdLyXcG5E41xaamn9ZyQqOE9TUJdrRlH8/hjIf+UdOdDeKCUgg==
 
-"@silvermine/serverless-plugin-cloudfront-lambda-edge@2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@silvermine/serverless-plugin-cloudfront-lambda-edge/-/serverless-plugin-cloudfront-lambda-edge-2.2.2.tgz#a3f8de9f3ea34787f6f1cd14fc2c3836fadf86c5"
-  integrity sha512-6xzgZD+ic8zN3JEkeDSpAHBhMjhf+wEPvMM4bALURoRnxesmIlk0XU0BkFGXSPKNaqtyL3mtXgr1hlPSaqCi/A==
+"@silvermine/serverless-plugin-cloudfront-lambda-edge@2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@silvermine/serverless-plugin-cloudfront-lambda-edge/-/serverless-plugin-cloudfront-lambda-edge-2.2.3.tgz#b24e1e5aaf363bf65385faf1f879c8427da4fc6d"
+  integrity sha512-W2Tfw6T+Ume3tBaXIObmtnsvpmyp1vISU5wju9aPJSjwSXENjlZtJAo5KYQ4eBFd3pWeMYTAkWm2FUsCAF3z4A==
   dependencies:
     class.extend "0.9.2"
     underscore "1.13.1"
