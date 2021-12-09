@@ -3779,10 +3779,10 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-polyfill-library@^3.110.0:
-  version "3.110.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.110.0.tgz#42300fb774975620fd68d1b0032ef8fcfc35dbe3"
-  integrity sha512-1rcrxhKm41aNeyv4rCuKMo+3ICJcAakCJw/5qteUHWaY7k47mNjkn8s+6xuSWuOUryjpvP7z4Loob9/pB/Ieag==
+polyfill-library@^3.110.1:
+  version "3.110.1"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.110.1.tgz#a6c8cf0c6ed52d8b73633dc95e2963153cefcfaf"
+  integrity sha512-OTgQPd6If8DQSrAXcFU2soHXrCHAJpGkBgWRSqEEcydauxzmuU3T1s15wOPfSd1gj8mXbiIrPaDndt0zy4hFTA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.10.1"
     from2-string "^1.1.0"
