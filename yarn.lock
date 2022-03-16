@@ -3763,10 +3763,10 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-polyfill-library@^3.110.1:
-  version "3.110.1"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.110.1.tgz#a6c8cf0c6ed52d8b73633dc95e2963153cefcfaf"
-  integrity sha512-OTgQPd6If8DQSrAXcFU2soHXrCHAJpGkBgWRSqEEcydauxzmuU3T1s15wOPfSd1gj8mXbiIrPaDndt0zy4hFTA==
+polyfill-library@^3.111.0:
+  version "3.111.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.111.0.tgz#caf37789d8f8dab1b648ad6ff225081aa6c06cbd"
+  integrity sha512-BLh/1m/QPKrH3fEmIICpHHOVoYb9naWKImWkYuGoh26sHFiNO01arJ1KXEQMYLfVl4btpCoX/bRdqQY9kIR/eQ==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.10.1"
     from2-string "^1.1.0"
