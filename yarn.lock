@@ -315,18 +315,18 @@
     jest "^26.0.0"
     yargs-parser "^18.0.0"
 
-"@financial-times/polyfill-useragent-normaliser@^1.10.1":
-  version "1.10.1"
-  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.10.1.tgz#e23115a3ab0b29417b00cf0b49db4a4ce9fe27ed"
-  integrity sha512-u+VCD2ISgkh6eoxdyb0L8bTApdU8t3fvHLS9ZXokC02b8iQD8nkRcpui5BIbuF+aYkWkTpaJhUInCueAGDBVAw==
+"@financial-times/polyfill-useragent-normaliser@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-2.0.1.tgz#39cbfcc985776e13ad61e44bc04af95c6023a01b"
+  integrity sha512-I6zZJgy3cwM9ojo9NVNj5kNTkt96KIKhJQIPQ7vjROaDCpy+sTRQA2HLCjBFKgo0AzsqdMB43Tx0Szt/mf+00g==
   dependencies:
-    "@financial-times/useragent_parser" "^1.6.0"
+    "@financial-times/useragent_parser" "^1.6.1"
     semver "^7.1.1"
 
-"@financial-times/useragent_parser@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.6.0.tgz#fcbba56936735fb4a8e6b700baf787c863ed64d1"
-  integrity sha512-v6Ucl//xSVhpyTtHMVCA9uv9W7CVwj8vBAQFKFDkfGC1DquBobOMhnzH9Odc+Tunf+i4WRnNgt90fQ7CSAbU3g==
+"@financial-times/useragent_parser@^1.6.1":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.6.3.tgz#338e9d63b77152cda3b7244db7b9b9db996de361"
+  integrity sha512-TlQiXt/vS5ZwY0V3salvlyQzIzMGZEyw9inmJA25A8heL2kBVENbToiEc64R6ETNf5YHa2lwnc2I7iNHP9SqeQ==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -3763,12 +3763,12 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-polyfill-library@^3.110.1:
-  version "3.110.1"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.110.1.tgz#a6c8cf0c6ed52d8b73633dc95e2963153cefcfaf"
-  integrity sha512-OTgQPd6If8DQSrAXcFU2soHXrCHAJpGkBgWRSqEEcydauxzmuU3T1s15wOPfSd1gj8mXbiIrPaDndt0zy4hFTA==
+polyfill-library@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-4.1.0.tgz#023ec0cb9c6dab2b3b4a22411b2c971738e1f641"
+  integrity sha512-pMEwfIlsNUe/a2jR30mCD0pGvk1gmCPyrbketF9ThK/hYRB5g4GAMt8aDLDiuwioGmFhfAlKwHe7yWzDbFCuYg==
   dependencies:
-    "@financial-times/polyfill-useragent-normaliser" "^1.10.1"
+    "@financial-times/polyfill-useragent-normaliser" "^2.0.0"
     from2-string "^1.1.0"
     graceful-fs "^4.2.8"
     merge2 "^1.0.3"
